@@ -17,7 +17,7 @@ let package = Package(name: "RxAlamofire",
                         // Dependencies declare other packages that this package depends on.
                         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.1.0")),
                         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.1.0")),
-                        .package(url: "https://github.com/AliSoftware/OHHTTPStubs.git", .upToNextMajor(from: "9.0.0"))
+                        //.package(url: "https://github.com/AliSoftware/OHHTTPStubs.git", .upToNextMajor(from: "9.0.0"))
                       ],
                       
                       targets: [
@@ -30,12 +30,12 @@ let package = Package(name: "RxAlamofire",
                                   .product(name: "RxCocoa", package: "RxSwift")
                                 ],
                                 path: "Sources"),
-                        .testTarget(name: "RxAlamofireTests",
-                                    dependencies: [
-                                      .byName(name: "RxAlamofire"),
-                                      .product(name: "RxBlocking", package: "RxSwift"),
-                                      .product(name: "OHHTTPStubs", package: "OHHTTPStubs"),
-                                      .product(name: "OHHTTPStubsSwift", package: "OHHTTPStubs")
-                                    ])
+//                        .testTarget(name: "RxAlamofireTests",
+//                                    dependencies: [
+//                                      .byName(name: "RxAlamofire"),
+//                                      .product(name: "RxBlocking", package: "RxSwift"),
+//                                      //.product(name: "OHHTTPStubs", package: "OHHTTPStubs"),
+//                                      //.product(name: "OHHTTPStubsSwift", package: "OHHTTPStubs")
+//                                    ])
                       ],
                       swiftLanguageVersions: [.v5])
